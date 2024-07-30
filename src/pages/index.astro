@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar.astro';
 import Layout from '../layouts/Layout.astro';
 // import Card from '../components/Card.astro';
 import bgHome from '../assets/BG.png'
+import bg2Home from '../assets/BG-2.png'
+import dotHome from '../assets/dot.png'
 
 const items = [
 	{
@@ -36,12 +38,34 @@ const title = "Mantis - servicios web de alta calidad"
 				<img class="absolute w-[75%] 2xl:w-[55%]" src="./MANTIS-bg.png" alt="">
 			</div>
 		</div>
+		<div style={{ background: `url(${bg2Home.src})` }} class="bg-home-2-image">
+			<div class="relative flex justify-center items-center h-full">
+				<div class="absolute flex flex-col justify-between w-[55rem] h-[300px] p-7 bg-black/30 text-white">
+					<span class="text-6xl font-extrabold">
+						Diseñamos con <span class="text-main-green">creatividad</span>, <br>
+						programamos con <span class="text-main-green">agilidad</span>.
+					</span>
+					<div class="flex items-center">
+						<div class="">Servicios</div>
+						<img class="mt-1 px-2.5" src={dotHome.src} alt="">
+						<div class="">Trabajo</div>
+						<img class="mt-1 px-2.5" src={dotHome.src} alt="">
+						<div class="">Nosotros</div>
+						<img class="mt-1 px-2.5" src={dotHome.src} alt="">
+					</div>
+				</div>
+			</div>
+		</div>
 	</main>
 </Layout>
 
 <style>
 	.bg-home-image{
 		height: 94vh;
+		width: 100%;
+	}
+	.bg-home-2-image{
+		height: 100vh;
 		width: 100%;
 	}
 </style>

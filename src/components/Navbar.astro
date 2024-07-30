@@ -1,4 +1,6 @@
 ---
+import dotHome from '../assets/dot.png'
+
 interface NavbarItem {
 	title: string;
 	url: string;
@@ -18,7 +20,7 @@ const { items } = Astro.props;
   <div class="flex justify-center items-center text-lg text-center space-x-7">
     {items.map((item: NavbarItem, index: number) => 
       <div class="flex items-center space-x-7">
-        {index > 0 && <div class="bg-[#56d07d] w-[5px] h-[5px] rounded"></div>}
+        {index > 0 && <img class="mt-1" src={dotHome.src} alt="">}
         <li class="list-none text-white"><a href={item.url}>{item.title}</a></li>  
       </div>
     )}
