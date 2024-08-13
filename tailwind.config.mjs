@@ -8,7 +8,8 @@ export default {
 			}
 		},
 		fontFamily:{
-			'cronus-round': ['CronusRound', 'sans-serif']
+			'cronus-round': ['CronusRound', 'sans-serif'],
+			'aktiv-grotesk': ["aktiv-grotesk-std", 'sans-serif']
 		}
 	},
 	plugins: [],
