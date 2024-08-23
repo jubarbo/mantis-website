@@ -5,7 +5,7 @@ import Layout from '../layouts/Layout.astro';
 import bgHome from '../assets/BG.png'
 import bg2Home from '../assets/BG-2.png'
 import dotHome from '../assets/dot.png'
-import mantisHome from '../assets/mantis.svg'
+import CardSlider from '../components/CardSlider';
 
 const items = [
 	{
@@ -26,7 +26,7 @@ const items = [
 	},
 ];
 
-const title = "Mantis - servicios web de alta calidad"
+const title = "Mantis - servicios web de alta calidad";
 
 ---
 
@@ -59,19 +59,9 @@ const title = "Mantis - servicios web de alta calidad"
 		</div>
 		<div style={{ background: `url(${bgHome.src})` }} class="flex flex-col justify-center items-center bg-home-image-sections text-white pb-10">
 			<div class="text-center text-6xl font-extrabold font-aktiv-grotesk pt-16 mb-20 2xl:mb-32">¿Qué <span class="text-green-500">servicios</span> ofrecemos?</div>
-			<div class="flex relative justify-center font-aktiv-grotesk">
-				<div class="absolute -top-10">
-					<img width="580" src={mantisHome.src} alt="">
-				</div>
-				<div class="relative z-10 bg-black/50 w-[990px] h-[420px] pl-[180px] pt-[80px]">
-					<div class="text-5xl font-extrabold">WEBS A <span class="text-green-500">MEDIDA</span></div>
-					<div class="h-0.5 w-[80%] bg-green-500 mt-4 mb-3"></div>
-					<div class="whitespace-normal text-[24px] font-semibold mb-2">Cada cliente es único y tienen una necesidad diferente, por eso <br> creemos que la solución para desarrollar una web es crear un <br> diseño de cero sin utilizar plantillas pre creadas.</div>
-					<button class="text-white bg-green-500 text-xl px-5 py-3 rounded-full font-bold">Contáctanos</button>
-				</div>
-			</div>
-
+			<CardSlider client:only="react"/>			
 		</div>
+
 	</main>
 </Layout>
 
